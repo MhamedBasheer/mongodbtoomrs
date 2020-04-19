@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee List</h1>
+      <% if(facilities.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>Facility Name</th>
+            <th>Fosa</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<facilities.length;i++) { %>
+            <tr>
+              <td><a href="/facilities/show/<%= facilities[i]._id%>"><%= facilities[i].name%></a></td>
+              <td><%= facilities[i].fosaCode%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No facility found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

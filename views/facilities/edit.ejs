@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Facility</title>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+</head>
+
+<body>
+    <div class="container">
+        <h3><a href="/facilities">Facility List</a></h3>
+        <h1>Edit Facility</h1>
+        <form action="/facilities/update/<%= facility._id%>" method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="name" value="<%= facility.name %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Fosa code</td>
+                        <td><input name="fosaCode" value="<%= facility.fosaCode %>"></td>
+                    </tr>
+                    <tr>
+                        <td>Url</td>
+                        <td><input type="text" name="url" value="<%= facility.url %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email" value="<%= facility.email %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Tel</td>
+                        <td><input type="number" name="tel" value="<%= facility.phoneNumber %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td><textarea type="string" name="description" value="<%= facility.description %>" /></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><input type="string" name="description" value="<%= facility.description %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Manager</td>
+                        <td><input type="string" name="manager" value="<%= facility.manager %>" /></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>Geoposition:</td>
+                    <tr>
+                        <td>Province <input type="string" name="province" value="<%= facility.province %>" /></td>
+                        <td>District <input type="string" name="district" value="<%= facility.district %>" /></td>
+                        <td>Sector <input type="string" name="sector" value="<%= facility.sector %>" /></td>
+                        <td>Cell <input type="string" name="cell" value="<%= facility.cell %>" /></td>
+                        <td>Umudugudu <input type="string" name="umudugudu" value="<%= facility.umudugudu %>" /></td>
+
+                    </tr>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>Cordinate:</td>
+                    <tr>
+                        <td>Longitude <input type="string" name="longitude" value="<%= facility.longitude %>" /></td>
+                        <td>Latitude <input type="string" name="latitude" value="<%= facility.latitude %>" /></td>
+                        <td>Altitude <input type="sring" name="altitude" value="<%= facility.altitude %>" /></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button type="submit">Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
